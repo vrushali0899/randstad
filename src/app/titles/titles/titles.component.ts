@@ -13,8 +13,7 @@ export class TitlesComponent implements OnInit {
   id:any
 
   constructor(
-    private activatedRoute:ActivatedRoute,
-    private userService:UserService
+    private activatedRoute:ActivatedRoute
   ) { }
 
   seenTitle(titleId:any){

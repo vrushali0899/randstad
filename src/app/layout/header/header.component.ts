@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { UserService } from 'src/app/users/services/user.service';
-import { Location } from '@angular/common'; 
 
 @Component({
   selector: 'app-header',
@@ -11,27 +10,21 @@ import { Location } from '@angular/common';
 export class HeaderComponent implements OnInit {
 
   searchText:any
-  displaySearch=false;
+  displaySearch=true;
 
   constructor(
     private userService:UserService,
-    private acRoute:ActivatedRoute,
-    private router:Router,
-    private readonly location: Location) {
+    private router:Router) {
 }
 
   search(){
     this.userService.setData(this.searchText)
-    //console.log(this.searchText)
-  
   }
 
   ngOnInit(): void {
-   
       this.router.events.subscribe((event:any) => {
       if (event instanceof NavigationEnd) {
-       this.displaySearch = event.url==='/users/list'
-       console.log(event);
+       this.displaySearch = event.urlAfterRedirects=='/users/list'?true:false;
       }
     });
     

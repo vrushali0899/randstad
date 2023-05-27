@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { UsersModule } from './users/users.module';
-import { UserComponent } from './users/components/user/user.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { LayoutModule } from './layout/layout.module';

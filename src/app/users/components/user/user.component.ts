@@ -23,7 +23,7 @@ usersData:Array<any>=[];
     private service:UserService,
     private router:Router) { }
 
-  //grou by userid
+ 
   getUserData(){
     let localData:any=localStorage.getItem('users');
     localData=JSON.parse(localData)
@@ -75,7 +75,6 @@ usersData:Array<any>=[];
   ngOnInit(): void {
      this.getUserData();
       this.service.getData().subscribe((data:any)=>{
-         console.log(data)
      if(data.length>0){
       this.filterData(data)
      }else{
