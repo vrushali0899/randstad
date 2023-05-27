@@ -1,0 +1,4 @@
+<div style="padding:15px;font-size: 30px;">Section Title</div>
+<div  *ngFor="let title of titlesData" class="rectangles">
+    <div [ngClass]="{'seen-title': title.seen === true}" class="titles " (click)="seenTitle(title.id)">{{title.title}}</div>
+</div>

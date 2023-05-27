@@ -1,0 +1,14 @@
+.titles{
+    border: 1px solid #000;
+    padding: 3%;
+    font-size: larger;
+    font-weight: 400;
+}
+
+.rectangles{
+padding:10px
+}
+
+.seen-title{
+  color:rgb(86, 231, 25);
+}

@@ -1,0 +1,26 @@
+
+<div class="users" *ngIf="groupedUsers">
+<div style="padding: 10px;" *ngFor="let item of groupedUsers | keyvalue">
+   
+    <a href="#" class="notification"  [routerLink]="['/titles/list',item.key]"  >
+       
+        <div>
+        <div class="circle">
+        <div class="letter">
+            <div class="triangle-up"></div>
+            <div class="rectangle">
+            <!-- <span>{{item.key}}</span> -->
+            <i class="arrow right"></i></div>
+        </div>
+        </div>
+        
+        <span class="badge">{{count(item.value)}}</span>
+        </div>
+    <span class="name">User {{item.key}}</span>
+        
+    </a>
+
+</div>
+</div>
+
+
